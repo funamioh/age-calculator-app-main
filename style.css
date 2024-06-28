@@ -1,8 +1,38 @@
-/* .container {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(234, 233, 233);
+}
+
+.result-field {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.2;
+  padding-right: 200px;
+}
+
+.container {
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-} */
+  align-items: center;
+}
+
+.wrapper {
+  background-color: white;
+  padding: 35px;
+  border-radius: 16px 16px 100px 16px;
+}
+
+.flex-container {
+  display: flex;
+}
 
 .input-filed{
   width: 100vw;
@@ -14,11 +44,47 @@ input, label {
   display: block;
 }
 
+label {
+  color: rgb(112, 112, 112);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+input[type="text"] {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 4px 0;
+  padding: 6px 12px;
+  width: 80px;
+  margin-right: 20px;
+  border: 1px solid rgb(200, 199, 199);
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border:1px solid hsl(228, 45%, 44%);
+}
+
 .arrow-icon {
+  width: 35px;
   filter: white;
   padding: 20px;
   background-color: hsl(228, 45%, 44%);
   border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+}
+
+.section-separation {
+  margin-top: 20px;
+  position: relative;
+}
+
+.arrow-icon:hover {
+  background-color: black;
 }
 
 label.uppercase {
@@ -31,6 +97,8 @@ label.uppercase {
 
 .error-message {
   color: red;
+  font-size: 10px;
+  margin: 0;
 }
 
 button {
@@ -44,4 +112,41 @@ button {
 
 .age-display {
   color: hsl(228, 45%, 44%);
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    width: 80vw;
+    padding: 60px 25px;
+  }
+
+  hr {
+    margin: 0;
+  }
+
+  .section-separation {
+    margin: 40px 0;
+  }
+
+  .arrow-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .result-field {
+    padding-right: 0;
+  }
+
+  input[type="text"] {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2px 0;
+    padding: 6px 12px;
+    width: 60px;
+    margin-right: 10px;
+    border: 1px solid rgb(200, 199, 199);
+    border-radius: 4px;
+  }
 }
