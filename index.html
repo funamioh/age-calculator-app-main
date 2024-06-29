@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,23 +16,52 @@
   </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <div class="wrapper">
+      <div class="inner-wrapper">
+  <div class="input-field">
+  <form id="age-form" action="submit">
+    <div class="flex-container">
+    <div>
+    <label id="day-label" class="uppercase">Day</label>
+    <input id="day" type="text" placeholder="DD">
+    <p id="day-error" class="error-message"></p>
   </div>
+  <div>
+    <label id="month-label" class="uppercase">Month</label>
+    <input id="month" type="text" placeholder="MM">
+    <p id="month-error" class="error-message"></p>
+  </div>
+  <div>
+    <label id="year-label" class="uppercase">Year</label>
+    <input id="year" type="text" placeholder="YYYY">
+    <p id="year-error" class="error-message"></p>
+  </div>
+</div>
+
+<div class="section-separation">
+<hr>
+  <button type="submit">
+  <img src="./assets/images/icon-arrow.svg" class="arrow-icon" alt="arrow-icon">
+</button>
+</div>
+</form>
+</div>
+
+  <div class="result-field">
+  <div><p id="year-display" class="age-display">--</p> years</div>
+  <div><p id="month-display" class="age-display">--</p>month</div>
+  <div><p id="day-display" class="age-display">--</p>days</div>
+
+</div>
+</div>
+</div>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/funamioh" target="_blank">Miho Funayama</a>.
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
