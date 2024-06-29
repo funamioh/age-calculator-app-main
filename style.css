@@ -6,6 +6,7 @@
 
 body {
   background: rgb(234, 233, 233);
+  overflow: hidden;
 }
 
 .result-field {
@@ -101,6 +102,14 @@ label.uppercase {
   margin: 0;
 }
 
+input.red {
+  border: 1px solid red;
+}
+
+label.red {
+  color: red;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -129,8 +138,13 @@ button {
     margin: 40px 0;
   }
 
+  .flex-container {
+    margin-bottom: 80px;
+  }
+
   .arrow-icon {
     top: 50%;
+    top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
